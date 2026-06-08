@@ -7,7 +7,9 @@ export default function Home() {
     <main id="top" className="page fade-in">
       <section className="hero shell">
         <p className="kicker">{site.location}</p>
-        <h1>{site.name}</h1>
+        <h1><a href="/">
+          {site.name}
+        </a></h1>
         <p className="intro">{site.intro}</p>
         <p className="sub-intro">{site.subIntro}</p>
         <div className="intro-links" aria-label="Profile links">
