@@ -13,16 +13,21 @@ export default function Home() {
         <p className="intro">{site.intro}</p>
         <p className="sub-intro">{site.subIntro}</p>
         <div className="intro-links" aria-label="Profile links">
-          {site.links.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              target={link.href.startsWith("http") ? "_blank" : undefined}
-              rel={link.href.startsWith("http") ? "noreferrer" : undefined}
-            >
-              {link.label}
-            </a>
-          ))}
+          {site.links.map((link) => {
+            const opensInNewTab =
+              link.href.startsWith("http") || link.href.endsWith(".pdf");
+
+            return (
+              <a
+                key={link.label}
+                href={link.href}
+                target={opensInNewTab ? "_blank" : undefined}
+                rel={opensInNewTab ? "noreferrer" : undefined}
+              >
+                {link.label}
+              </a>
+            );
+          })}
         </div>
       </section>
 
