@@ -1,11 +1,10 @@
 export const site = {
   name: "Harit Chetty",
   email: "chettiharit@gmail.com",
-  location: "Madison, WI",
-  intro:
-    "I like building software across systems, data, and backend tools, especially to simplify workflows.",
+  location: "Dallas, TX",
+  intro: "I like building things.",
   subIntro:
-    "Computer Science + Data Science graduate from UW - Madison. Interested in software engineering, infrastructure, ML systems, and practical developer tools.",
+    "Software Engineer @ Capital One. Interested in infrastructure, ML systems, and practical developer tools.",
   links: [
     { label: "GitHub", href: "https://github.com/haritchetty" },
     { label: "LinkedIn", href: "https://www.linkedin.com/in/haritchetty/" },
@@ -76,8 +75,15 @@ export const projects = [
 
 export const work = [
   {
+    title: "Software Engineer",
+    place: "Capital One",
+    time: "Feb 2027 — Present",
+    note:
+      "Incoming Software Engineer in Capital One's Technology Development Program (TDP)."
+  },
+  {
     title: "Computer Aided Engineering Consultant",
-    place: "UW - Madison College of Engineering",
+    place: "UW-Madison College of Engineering",
     time: "Sep 2021 — Aug 2025",
     note:
       "Resolved computing issues for engineering students, faculty, and staff; maintained lab hardware; supported onboarding for newer consultants."
@@ -87,7 +93,14 @@ export const work = [
     place: "Goodwill Industries",
     time: "Oct 2019 — Mar 2020",
     note:
-      "Various work involving donations, register operations, and merchandise flow."
+      "Assisted customers at checkout, processed donations, and helped organize merchandise."
+  },
+  {
+    title: "Team Member",
+    place: "Fast Forward Skate Center",
+    time: "May 2018 — Sep 2018",
+    note:
+      "Assisted customers, worked concessions, and helped maintain the arcade and skating rink during busy hours."
   }
 ];
 

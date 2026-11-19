@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Harit Chetty — Portfolio",
+  title: "Harit Chetty Portfolio",
   description: "A minimal portfolio for systems, data, and software projects."
 };
 

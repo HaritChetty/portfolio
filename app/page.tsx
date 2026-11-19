@@ -33,7 +33,6 @@ export default function Home() {
 
       <section id="projects" className="section shell">
         <div className="section-heading">
-          <span>01</span>
           <h2>Projects</h2>
         </div>
         <div className="project-list">
@@ -45,7 +44,6 @@ export default function Home() {
 
       <section id="work" className="section shell">
         <div className="section-heading">
-          <span>02</span>
           <h2>Work</h2>
         </div>
         <div className="timeline">
@@ -57,7 +55,6 @@ export default function Home() {
 
       <section id="education" className="section shell last-section">
         <div className="section-heading">
-          <span>03</span>
           <h2>Education</h2>
         </div>
         <div className="timeline">
