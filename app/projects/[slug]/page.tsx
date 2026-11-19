@@ -21,35 +21,25 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
           ← Back
         </Link>
         <header className="project-hero-detail">
-          <p className="kicker">{project.eyebrow}</p>
-          <h1>{project.title}</h1>
+          <p className="kicker project-kicker">
+            <span>{project.eyebrow}</span>
+            <span>{project.year}</span>
+          </p>
+          <div className="project-title-row">
+            <h1>{project.title}</h1>
+            {project.links[0] && (
+              <a
+                href={project.links[0].href}
+                target="_blank"
+                rel="noreferrer"
+                className="ghost-button"
+              >
+                GitHub <span aria-hidden="true">↗</span>
+              </a>
+            )}
+          </div>
           <p>{project.summary}</p>
         </header>
-
-        <section className="detail-grid">
-          <div>
-            <span className="detail-label">Role</span>
-            <p>{project.role}</p>
-          </div>
-          <div>
-            <span className="detail-label">Year</span>
-            <p>{project.year}</p>
-          </div>
-          <div>
-            <span className="detail-label">Stack</span>
-            <p>{project.stack.join(" · ")}</p>
-          </div>
-          <div>
-            <span className="detail-label">Links</span>
-            <p>
-              {project.links.map((link) => (
-                <a key={link.label} href={link.href} target="_blank" rel="noreferrer">
-                  {link.label}
-                </a>
-              ))}
-            </p>
-          </div>
-        </section>
 
         <section className="case-section">
           <span className="detail-label">Overview</span>

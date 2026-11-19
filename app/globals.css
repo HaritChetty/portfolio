@@ -41,6 +41,11 @@ a { color: inherit; text-decoration: none; }
   color: var(--soft);
   font-size: 13px;
 }
+.project-kicker { display: flex; gap: 10px; }
+.project-kicker span + span::before {
+  content: "·";
+  margin-right: 10px;
+}
 h1 {
   margin: 0;
   font-size: clamp(36px, 8vw, 58px);
@@ -190,7 +195,31 @@ h1 {
   transition: color 140ms ease, transform 140ms ease;
 }
 .back-link:hover { color: var(--text); transform: translateX(-2px); }
-.project-hero-detail { padding: 0 0 32px; }
+.project-hero-detail { padding: 0 0 32px; border-bottom: 1px solid var(--line); }
+.project-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.ghost-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 9px 18px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted);
+  font-size: 13px;
+  white-space: nowrap;
+  transition: background 140ms ease, color 140ms ease, border-color 140ms ease;
+}
+.ghost-button:hover {
+  background: #eeeeee;
+  border-color: #eeeeee;
+  color: #090909;
+}
 .project-hero-detail p:last-child {
   max-width: 600px;
   margin: 24px 0 0;
@@ -198,32 +227,17 @@ h1 {
   line-height: 1.42;
   color: var(--muted);
 }
-.detail-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0;
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-}
-.detail-grid > div { padding: 18px 0; }
-.detail-grid > div:nth-child(odd) { padding-right: 18px; }
-.detail-grid > div:nth-child(even) { padding-left: 18px; }
 .detail-label {
   display: block;
   margin-bottom: 10px;
   color: var(--soft);
   font-size: 12px;
 }
-.detail-grid p,
 .case-section p {
   margin: 0;
   color: var(--muted);
   line-height: 1.56;
   font-size: 14px;
-}
-.detail-grid a {
-  color: var(--text);
-  border-bottom: 1px solid var(--line);
 }
 .case-section {
   padding: 40px 0;
@@ -236,14 +250,12 @@ h1 {
 }
 .demo-panel {
   margin-top: 0;
+  border-bottom: 0;
   background: transparent;
 }
 
 @media (max-width: 760px) {
   .hero { padding-top: 72px; }
   .intro-links { gap: 11px 14px; }
-  .detail-grid { grid-template-columns: 1fr; }
-  .detail-grid > div:nth-child(odd),
-  .detail-grid > div:nth-child(even) { padding-left: 0; padding-right: 0; }
   .back-link { margin-bottom: 36px; }
 }
