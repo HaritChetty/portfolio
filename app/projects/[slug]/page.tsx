@@ -45,11 +45,6 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
           <span className="detail-label">Overview</span>
           <p>{project.details}</p>
         </section>
-
-        <section className="case-section demo-panel">
-          <span className="detail-label">Demo in progress...</span>
-          {/* <p>{project.demo}</p> */}
-        </section>
       </article>
     </main>
   );

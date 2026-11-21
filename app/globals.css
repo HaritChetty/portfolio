@@ -248,12 +248,6 @@ h1 {
   font-size: 16px;
   letter-spacing: -0.02em;
 }
-.demo-panel {
-  margin-top: 0;
-  border-bottom: 0;
-  background: transparent;
-}
-
 @media (max-width: 760px) {
   .hero { padding-top: 72px; }
   .intro-links { gap: 11px 14px; }
